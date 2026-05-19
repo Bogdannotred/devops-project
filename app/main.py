@@ -58,5 +58,5 @@ def test():
 
 @app.get("/mai")
 def testari():
-    return {"MaiMulteTeste": "testariii!"}
+    return {"MaiMulteTeste": "testariiii!"}
 
