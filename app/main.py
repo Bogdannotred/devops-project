@@ -50,3 +50,8 @@ def compute():
     duration = time.time() - start
 
     return {"result": total, "duration_seconds": duration}
+
+
+@app.get("/test")
+def test():
+    print("testariii!")
