@@ -57,6 +57,6 @@ def test():
     return {"Test": "testariii!"}
 
 @app.get("/mai")
-def test():
+def testari():
     return {"MaiMulteTeste": "testariii!"}
 
