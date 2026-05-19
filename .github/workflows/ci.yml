@@ -26,7 +26,7 @@ jobs:
           pip install -r app/requirements.txt
 
       - name: Check fromatting 
-        run: python -m ruff format app --diff
+        run: python -m ruff format app --fix
 
       - name: Run lint
         run: python -m ruff check app
