@@ -54,4 +54,4 @@ def compute():
 
 @app.get("/test")
 def test():
-    print("testariii!")
+    return {"Test": "testariii!"}
