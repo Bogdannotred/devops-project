@@ -46,7 +46,7 @@ def logs_demo():
 @app.get("/compute")
 def compute():
     start = time.time()
-    total = sum(i * i for i in range(100000000000000))
+    total = sum(i * i for i in range(10000))
     duration = time.time() - start
 
     return {"result": total, "duration_seconds": duration}
