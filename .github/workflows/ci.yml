@@ -56,3 +56,11 @@ jobs:
           docker tag devops-health-api:${{ github.sha }} ${{ secrets.ECR_REPOSITORY_URI }}:latest
           docker push ${{ secrets.ECR_REPOSITORY_URI }}:${{ github.sha }}
           docker push ${{ secrets.ECR_REPOSITORY_URI }}:latest
+
+      - name: Force ECS deployment
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          aws ecs update-service \
+            --cluster devops-health-api-cluster \
+            --service devops-health-api-service \
+            --force-new-deployment
