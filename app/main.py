@@ -55,3 +55,8 @@ def compute():
 @app.get("/test")
 def test():
     return {"Test": "testariii!"}
+
+@app.get("/mai")
+def test():
+    return {"MaiMulteTeste": "testariii!"}
+
