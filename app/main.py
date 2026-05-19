@@ -56,6 +56,7 @@ def compute():
 def test():
     return {"Test": "testariii!"}
 
+
 @app.get("/mai")
 def testari():
     return {"MaiMulteTeste": "testariiii!"}
