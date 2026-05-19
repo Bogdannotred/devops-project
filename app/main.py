@@ -18,7 +18,7 @@ def root():
     return {"message": "DevOps Health API is running", "docs": "/docs"}
 
 
-@app.get("/health")
+@app.get(" /health")
 def health():
     return {"status": "ok"}
 
