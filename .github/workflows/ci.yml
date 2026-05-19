@@ -26,10 +26,13 @@ jobs:
           pip install -r app/requirements.txt
 
       - name: Check fromatting 
-        run: python -m ruff format app --fix
+        run: python -m ruff format app --diff
 
       - name: Run lint
         run: python -m ruff check app
 
       - name: Run Tests
         run: python -m pytest app/tests -v
+
+      - name: Build Docker image
+        run: docker build -t devops-health-api${{ github.sha }} .
